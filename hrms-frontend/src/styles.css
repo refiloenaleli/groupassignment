@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #F3CAC1;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #f4f4f4;
+  padding: 10px 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #D0DC3D;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Button Styles */
+button, .nav-button {
+  background-color: #D0DC3D;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .nav-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button:active, .nav-button:active {
+  background-color: #3b8c3b;
+}
+
+/* Card Styles */
+.dashboard-cards, .staff-list, .vehicle-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dashboard-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 280px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Form Styles */
+.form input, .form select, .dashboard-form input, .dashboard-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dashboard-form button.submit-btn, .form button.submit-btn {
+  background-color: #D0DC3D;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-form button:hover, .form button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-cards, .staff-list, .vehicle-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li a {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .dashboard-card {
+    width: 90%;
+  }
+
+  button, .nav-button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}

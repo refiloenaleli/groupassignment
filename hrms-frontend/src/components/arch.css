@@ -1,0 +1,47 @@
+/* Styles for Architecture Navigation */
+.architecture-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #f9f9f9; /* Subtle background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.architecture-nav .nav-button {
+  text-decoration: none;
+  color: white;
+  background-color: #004080; /* Consistent with other buttons */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.architecture-nav .nav-button:hover {
+  background-color: #F3CAC1; /* Highlight color on hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+.architecture-nav .nav-button:active {
+  background-color: #F3CAC1; /* Darker shade for active state */
+  transform: scale(1); /* Remove zoom on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .architecture-nav {
+    gap: 10px; /* Adjust spacing for smaller screens */
+    padding: 5px;
+  }
+
+  .architecture-nav .nav-button {
+    font-size: 14px; /* Adjust font size for better fit */
+    padding: 8px 15px;
+  }
+}

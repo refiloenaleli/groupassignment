@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Art Life Consultancy Agency - Streamline workforce and procurement management with ease.">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="HRMS, Employee Management, Procurement Management, Dashboard, Human Resources, Consultancy">
+
+  <title>Art Life Consultancy Agency</title>
+
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- External Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Open Graph for Social Media Sharing -->
+  <meta property="og:title" content="Art Life Consultancy Agency">
+  <meta property="og:description" content="Simplify HR and procurement processes with this comprehensive management tool.">
+  <meta property="og:image" content="/images/og-image.png">
+  <meta property="og:url" content="https://www.yourwebsite.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Art Life Consultancy Agency">
+  <meta name="twitter:description" content="Streamline workforce and procurement management with ease.">
+  <meta name="twitter:image" content="/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#6a11cb">
+
+  <!-- Preconnect for performance optimization -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Prefetch key assets -->
+  <link rel="prefetch" href="/images/og-image.png" as="image">
+
+  <!-- Include a critical CSS block for faster loading -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #6a11cb;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+    }
+    .footer-content a {
+      color: #6a11cb;
+      text-decoration: none;
+    }
+    .footer-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Art Life Consultancy Agency</h1>
+    <p>Your trusted tool for managing workforce and procurement with precision.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div id="root"></div> <!-- React will take over here -->
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Art Life Consultancy Agency. All rights reserved.</p>
+      <p>
+        Contact us at: 
+        <a href="mailto:artlifearchitecture@co.ls.com">artlifearchitecture@co.ls.com</a>
+      </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">Facebook</a> | 
+        <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">Twitter</a> | 
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript at the end for better performance -->
+  <script src="/js/app.js" defer></script>
+  <script>
+    // Dynamically update the footer year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

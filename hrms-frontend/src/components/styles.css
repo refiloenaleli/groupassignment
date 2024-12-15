@@ -1,0 +1,677 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Font Settings */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F6C240;
+  color: #222;
+  line-height: 1.7;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #F66440, #2575fc);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h2 {
+  color: #6a11cb;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Dashboard Stats Section */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stat {
+  background: linear-gradient(135deg, #eef2f3, #ffffff);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stat h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.stat p {
+  font-size: 2.5rem;
+  color: #2575fc;
+  font-weight: bold;
+}
+
+/* Buttons for Navigation */
+.stat button {
+  background: #6a11cb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.stat button:hover {
+  background: #2575fc;
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  background: linear-gradient(45deg, #F66440, #6a11cb);
+  color: white;
+  border-radius: 12px;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dashboard-container {
+    padding: 1.5rem;
+  }
+
+  .stat {
+    padding: 1rem;
+  }
+
+  .stat h3 {
+    font-size: 1.2rem;
+  }
+
+  .stat p {
+    font-size: 2rem;
+  }
+
+  .stat button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+/* General Reset for Form Styles */
+.staff-form {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+  transition: box-shadow 0.2s ease;
+}
+
+.staff-form input {
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.staff-form input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.2);
+}
+
+/* Form Header */
+.staff-form h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Button Styles */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+.btn-primary {
+  background-color: #2575fc;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1459c7;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6a6a6a;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #555555;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .staff-form {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .staff-form input {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Parent Container */
+.order-list-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.order-list-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Order List */
+.order-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* List Items */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease;
+}
+
+.order-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Item Text */
+.order-item span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.order-item span strong {
+  color: #333;
+}
+
+.order-item span em {
+  color: #777;
+  font-style: italic;
+}
+
+/* Buttons Section */
+.order-item div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Edit Button */
+.btn-edit {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-edit:hover {
+  background-color: #1459c7;
+  transform: translateY(-2px);
+}
+
+/* Delete Button */
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item div {
+    margin-top: 0.5rem;
+    gap: 10px;
+  }
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Procurement Management Container */
+.procurement-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+}
+
+/* Title Section */
+.procurement-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.procurement-container h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Form Styling */
+.procurement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Form Group Styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+/* Actions Section */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #F66440;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1459c7;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .procurement-container {
+    padding: 1rem;
+  }
+
+  .procurement-form {
+    padding: 0.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+/* General Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Staff Container */
+.staff-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* Section Title */
+.staff-container h2 {
+  color: #6a11cb;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.staff-container h3 {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+/* Form Styling */
+.staff-container form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.staff-container form input[type="text"] {
+  padding: 0.8rem 1rem;
+  width: 250px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.staff-container form input[type="text"]:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+/* Button Styling */
+.staff-container form button {
+  padding: 0.8rem 1.5rem;
+  margin: 0.3rem 0;
+  color: #fff;
+  background: #6a11cb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.staff-container form button:hover {
+  background: #2575fc;
+  transform: translateY(-2px);
+}
+
+/* Staff List */
+.staff-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.staff-container ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.staff-container ul li:hover {
+  background-color: #f5f5f5;
+}
+
+.staff-container ul li span {
+  color: #555;
+}
+
+.staff-container ul li button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.staff-container ul li button:first-child {
+  background: #6a11cb;
+  color: white;
+}
+
+.staff-container ul li button:first-child:hover {
+  background: #2575fc;
+  transform: translateY(-2px);
+}
+
+.staff-container ul li button:last-child {
+  background: #e74c3c;
+  color: white;
+}
+
+.staff-container ul li button:last-child:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .staff-container form {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .staff-container form input[type="text"],
+  .staff-container form button {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .staff-container ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .staff-container ul li button {
+    width: 100%;
+  }
+}
